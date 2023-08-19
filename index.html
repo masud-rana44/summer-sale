@@ -21,6 +21,12 @@
       .font-work {
         font-family: "Work Sans", sans-serif;
       }
+
+      .remove {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
     </style>
   </head>
   <body class="font-work">
@@ -335,18 +341,41 @@
             </div>
             <span class="block border-b border-[#11111126] w-full my-5"></span>
             <button
+              id="btn-purchase"
               class="bg-[#E527B2] text-white px-4 h-12 text-lg font-medium rounded-lg w-full"
             >
               Make Purchase
             </button>
-            <button
-              id="btn-reset"
-              class="bg-[#E527B2] text-white px-4 h-12 text-lg font-medium rounded-lg"
-            >
-              Reset
-            </button>
           </div>
         </aside>
+      </div>
+
+      <!-- overlay -->
+      <div
+        id="overlay"
+        class="remove fixed top-0 left-0 w-full h-screen bg-[#11111166] z-10 transition-all duration-500"
+      ></div>
+
+      <!-- modal -->
+      <div
+        id="modal"
+        class="remove fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-24 rounded-[16px] text-center z-20 transition-all duration-500"
+      >
+        <img
+          class="block mx-auto"
+          src="./images/congo.png"
+          alt="congratulations image "
+        />
+        <h3 class="text-[#111] text-4xl font-bold mt-7">Congratulations</h3>
+        <p class="text-lg text-[#11111180] mt-3 mb-7">
+          Your Purchase the product
+        </p>
+        <button
+          id="btn-home"
+          class="bg-[#E527B2] text-white px-10 py-3 text-lg font-medium rounded-lg"
+        >
+          Go Home
+        </button>
       </div>
     </main>
 

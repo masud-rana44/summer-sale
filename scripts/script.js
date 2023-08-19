@@ -5,6 +5,11 @@ const discountEl = document.getElementById("discount");
 const totalEl = document.getElementById("total");
 const inputCoupon = document.querySelector(".input-coupon");
 const btnCoupon = document.querySelector(".btn-coupon");
+const btnHome = document.getElementById("btn-home");
+const btnPurchase = document.getElementById("btn-purchase");
+
+const modal = document.getElementById("modal");
+const overlay = document.getElementById("overlay");
 
 let item = 1;
 
@@ -49,11 +54,23 @@ btnCoupon.addEventListener("click", () => {
   inputCoupon.value = "";
 });
 
-document.querySelector("#btn-reset").addEventListener("click", () => {
+btnPurchase.addEventListener("click", () => {
+  const totalCartPrice = parseFloat(totalCartPriceEl.textContent);
+
+  if (totalCartPrice <= 0) return;
+
+  modal.classList.remove("remove");
+  overlay.classList.remove("remove");
+});
+
+btnHome.addEventListener("click", () => {
   item = 1;
   cartItemsContainer.textContent = "";
   totalCartPriceEl.innerHTML =
     discountEl.innerHTML =
     totalEl.innerHTML =
       "00.00 TK";
+
+  modal.classList.add("remove");
+  overlay.classList.add("remove");
 });
