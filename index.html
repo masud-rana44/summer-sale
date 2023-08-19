@@ -3,7 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Summer Sale Landing Page Design</title>
+
+    <style>
+      .font-work {
+        font-family: "Work Sans", sans-serif;
+      }
+    </style>
   </head>
-  <body></body>
+  <body class="font-work">
+    <header class="bg-[#F9F6E2] py-20">
+      <div
+        class="container mx-auto grid grid-cols-2 justify-items-center items-center gap-16"
+      >
+        <div class="text-[#111] text-center">
+          <p class="text-2xl 2xl:text-3xl font-medium mb-11">
+            ---SALE FEVER---
+          </p>
+          <h1 class="text-5xl 2xl:text-6xl font-bold mb-16">
+            Purchase TK 200 or above & get 20% off
+          </h1>
+          <div class="flex items-center justify-center gap-4">
+            <p class="text-xl 2xl:text-2xl font-medium">Use Promo Code</p>
+            <button
+              class="border-none bg-[#E527B2] rounded-lg text-xl 2xl:text-2xl font-semibold py-4 px-6 text-white"
+            >
+              SELL200
+            </button>
+          </div>
+        </div>
+        <img
+          class="inline-block col-start-1 row-start-1 col-span-2 lg:col-start-2"
+          src="./images/Summer.png"
+          alt="hero img"
+        />
+      </div>
+    </header>
+
+    <main class="bg-[#F8F8F8] pt-28 pb-44">
+      <div class="container mx-auto grid grid-cols-[1fr_300px]">
+        <div>
+          <!-- first -->
+          <div>
+            <h2 class="text-[#111] text-4xl font-bold mb-8">Kitchenware</h2>
+            <!-- Card container -->
+            <div class="grid grid-cols-3 gap-5">
+              <!-- card 1 -->
+              <div class="bg-white p-5 rounded-lg">
+                <div
+                  class="bg-[#F8F8F8] py-8 flex items-center justify-center rounded-lg"
+                >
+                  <img src="./images/prod1.png" alt="product" />
+                </div>
+                <div class="text-center pt-[22px]">
+                  <!-- rating -->
+
+                  <!-- ---- -->
+                  <h3 class="text-lg font-semibold">K. Accessories</h3>
+                  <span class="text-lg text-[#11111180]">39.00 TK</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
