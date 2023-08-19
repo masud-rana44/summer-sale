@@ -30,31 +30,37 @@
     </style>
   </head>
   <body class="font-work">
-    <header class="bg-[#F9F6E2] py-20">
+    <header class="bg-[#F9F6E2] p-8 lg:p-0">
       <div
-        class="container mx-auto grid grid-cols-2 justify-items-center items-center gap-16"
+        class="container mx-auto flex flex-col md:flex-row items-center gap-6 lg:gap-12 2xl:gap-16"
       >
-        <div class="text-[#111] text-center">
-          <p class="text-2xl 2xl:text-3xl font-medium mb-11">
+        <div class="flex-1 text-[#111] text-center">
+          <p class="text-xl lg:text-2xl 2xl:text-3xl font-medium mb-4 lg:mb-8">
             ---SALE FEVER---
           </p>
-          <h1 class="text-5xl 2xl:text-6xl font-bold mb-16">
+          <h1 class="text-3xl lg:text-5xl 2xl:text-6xl font-bold mb-6 lg:mb-12">
             Purchase TK 200 or above & get 20% off
           </h1>
-          <div class="flex items-center justify-center gap-4">
-            <p class="text-xl 2xl:text-2xl font-medium">Use Promo Code</p>
+          <div
+            class="flex flex-wrap items-center justify-center gap-3 lg:gap-4"
+          >
+            <p class="text-lg lg:text-xl 2xl:text-2xl font-medium">
+              Use Promo Code
+            </p>
             <button
-              class="border-none bg-[#E527B2] rounded-lg text-xl 2xl:text-2xl font-semibold py-4 px-6 text-white"
+              class="border-none bg-[#E527B2] rounded-lg text-lg lg:text-xl 2xl:text-2xl font-semibold py-2 lg:py-3 2xl:py-4 px-4 lg:px-5 2xl:px-6 text-white"
             >
               SELL200
             </button>
           </div>
         </div>
-        <img
-          class="inline-block col-start-1 row-start-1 col-span-2 lg:col-start-2"
-          src="./images/Summer.png"
-          alt="hero img"
-        />
+        <div class="flex-1 w-full">
+          <img
+            class="inline-block w-full h-full"
+            src="./images/Summer.png"
+            alt="hero img"
+          />
+        </div>
       </div>
     </header>
 
