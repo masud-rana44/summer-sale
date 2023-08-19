@@ -24,8 +24,9 @@ cards.forEach((card) =>
     );
 
     const totalCartPrice = parseFloat(totalCartPriceEl.textContent) + itemPrice;
-    totalCartPriceEl.innerHTML = `${totalCartPrice.toFixed(2)}TK`;
+    totalCartPriceEl.innerHTML = `${totalCartPrice.toFixed(2)} TK`;
 
+    if (totalCartPrice > 0) btnPurchase.removeAttribute("disabled");
     if (totalCartPrice >= 200) btnCoupon.removeAttribute("disabled");
 
     const li = document.createElement("li");
@@ -40,15 +41,15 @@ btnCoupon.addEventListener("click", () => {
   if (totalCartPrice < 200) return;
 
   if (!inputCoupon.value || inputCoupon.value !== "SELL200") {
-    alert("Please provide a valid coupon");
+    alert("Invalid coupon! Please provide a valid coupon.");
     return;
   }
 
   const discount = (totalCartPrice / 100) * 20;
   const total = totalCartPrice - discount;
 
-  discountEl.innerHTML = `${discount.toFixed(2)}TK`;
-  totalEl.innerHTML = `${total.toFixed(2)}TK`;
+  discountEl.innerHTML = `${discount.toFixed(2)} TK`;
+  totalEl.innerHTML = `${total.toFixed(2)} TK`;
 
   // clear the input field
   inputCoupon.value = "";
@@ -73,4 +74,7 @@ btnHome.addEventListener("click", () => {
 
   modal.classList.add("remove");
   overlay.classList.add("remove");
+
+  btnPurchase.setAttribute("disabled", true);
+  btnCoupon.setAttribute("disabled", true);
 });
