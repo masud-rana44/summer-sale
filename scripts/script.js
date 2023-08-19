@@ -24,7 +24,7 @@ cards.forEach((card) =>
     );
 
     const totalCartPrice = parseFloat(totalCartPriceEl.textContent) + itemPrice;
-    totalCartPriceEl.innerHTML = `${totalCartPrice.toFixed(2)} TK`;
+    totalCartPriceEl.innerHTML = `${totalCartPrice.toFixed(2)}TK`;
 
     if (totalCartPrice > 0) btnPurchase.removeAttribute("disabled");
     if (totalCartPrice >= 200) btnCoupon.removeAttribute("disabled");
@@ -48,8 +48,8 @@ btnCoupon.addEventListener("click", () => {
   const discount = (totalCartPrice / 100) * 20;
   const total = totalCartPrice - discount;
 
-  discountEl.innerHTML = `${discount.toFixed(2)} TK`;
-  totalEl.innerHTML = `${total.toFixed(2)} TK`;
+  discountEl.innerHTML = `${discount.toFixed(2)}TK`;
+  totalEl.innerHTML = `${total.toFixed(2)}TK`;
 
   // clear the input field
   inputCoupon.value = "";
@@ -70,7 +70,7 @@ btnHome.addEventListener("click", () => {
   totalCartPriceEl.innerHTML =
     discountEl.innerHTML =
     totalEl.innerHTML =
-      "00.00 TK";
+      "00.00TK";
 
   modal.classList.add("remove");
   overlay.classList.add("remove");
