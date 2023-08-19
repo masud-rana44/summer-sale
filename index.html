@@ -294,12 +294,13 @@
             <h3 class="text-xl font-medium mb-2">Have coupon?</h3>
             <div class="flex items-center">
               <input
-                class="px-4 h-12 border border-[#11111126] rounded-tl-lg rounded-bl-lg outline-none text-lg w-full"
+                class="input-coupon px-4 h-12 border border-r-transparent border-[#11111126] rounded-tl-lg rounded-bl-lg outline-none text-lg w-full"
                 type="text"
                 placeholder="Coupon code"
               />
               <button
-                class="bg-[#E527B2] text-white px-4 h-12 text-lg font-medium rounded-tr-lg rounded-br-lg"
+                disabled
+                class="btn-coupon bg-[#E527B2] text-white px-4 h-12 text-lg font-medium rounded-tr-lg rounded-br-lg"
               >
                 Apply
               </button>
@@ -321,15 +322,15 @@
             <div class="text-xl font-medium flex flex-col gap-1">
               <p>
                 Total price:
-                <span id="total-price" class="text-[#11111180]">257.00TK</span>
+                <span id="total-price" class="text-[#11111180]">00.00TK</span>
               </p>
               <p>
                 Discount:
-                <span class="text-[#11111180]">51.40TK</span>
+                <span id="discount" class="text-[#11111180]">00.00TK</span>
               </p>
               <p>
                 Total:
-                <span class="text-[#11111180]">205.60 TK</span>
+                <span id="total" class="text-[#11111180]">00.00 TK</span>
               </p>
             </div>
             <span class="block border-b border-[#11111126] w-full my-5"></span>
@@ -337,6 +338,12 @@
               class="bg-[#E527B2] text-white px-4 h-12 text-lg font-medium rounded-lg w-full"
             >
               Make Purchase
+            </button>
+            <button
+              id="btn-reset"
+              class="bg-[#E527B2] text-white px-4 h-12 text-lg font-medium rounded-lg"
+            >
+              Reset
             </button>
           </div>
         </aside>
