@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- icon -->
+    <link rel="shortcut icon" href="./images/Summer.png" type="image/x-icon" />
+
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -81,11 +84,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               <!-- card 1 -->
               <div class="card bg-white p-4 rounded-lg">
-                <div
+                <figure
                   class="bg-[#F8F8F8] py-8 flex items-center justify-center rounded-lg"
                 >
                   <img src="./images/prod1.png" alt="product" />
-                </div>
+                </figure>
                 <div class="text-center pt-[22px]">
                   <!-- rating -->
                   <div class="flex items-center justify-center">
@@ -107,11 +110,11 @@
 
               <!-- card 2 -->
               <div class="card bg-white p-4 rounded-lg">
-                <div
+                <figure
                   class="bg-[#F8F8F8] py-8 flex items-center justify-center rounded-lg"
                 >
                   <img src="./images/prod2.png" alt="product" />
-                </div>
+                </figure>
                 <div class="text-center pt-[22px]">
                   <!-- rating -->
                   <div class="flex items-center justify-center">
@@ -133,11 +136,11 @@
 
               <!-- card 3 -->
               <div class="card bg-white p-4 rounded-lg">
-                <div
+                <figure
                   class="bg-[#F8F8F8] py-8 flex items-center justify-center rounded-lg"
                 >
                   <img src="./images/prod3.png" alt="product" />
-                </div>
+                </figure>
                 <div class="text-center pt-[22px]">
                   <!-- rating -->
                   <div class="flex items-center justify-center">
@@ -170,11 +173,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               <!-- card 1 -->
               <div class="card bg-white p-4 rounded-lg">
-                <div
+                <figure
                   class="bg-[#F8F8F8] py-8 flex items-center justify-center rounded-lg"
                 >
                   <img src="./images/prod4.png" alt="product" />
-                </div>
+                </figure>
                 <div class="text-center pt-[22px]">
                   <!-- rating -->
                   <div class="flex items-center justify-center">
@@ -196,11 +199,11 @@
 
               <!-- card 2 -->
               <div class="card bg-white p-4 rounded-lg">
-                <div
+                <figure
                   class="bg-[#F8F8F8] py-8 flex items-center justify-center rounded-lg"
                 >
                   <img src="./images/prod5.png" alt="product" />
-                </div>
+                </figure>
                 <div class="text-center pt-[22px]">
                   <!-- rating -->
                   <div class="flex items-center justify-center">
@@ -222,11 +225,11 @@
 
               <!-- card 3 -->
               <div class="card bg-white p-4 rounded-lg">
-                <div
+                <figure
                   class="bg-[#F8F8F8] py-8 flex items-center justify-center rounded-lg"
                 >
                   <img src="./images/prod6.png" alt="product" />
-                </div>
+                </figure>
                 <div class="text-center pt-[22px]">
                   <!-- rating -->
                   <div class="flex items-center justify-center">
@@ -259,11 +262,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               <!-- card 1 -->
               <div class="card bg-white p-4 rounded-lg">
-                <div
+                <figure
                   class="bg-[#F8F8F8] py-8 flex items-center justify-center rounded-lg"
                 >
                   <img src="./images/prod7.png" alt="product" />
-                </div>
+                </figure>
                 <div class="text-center pt-[22px]">
                   <!-- rating -->
                   <div class="flex items-center justify-center">
@@ -285,11 +288,11 @@
 
               <!-- card 2 -->
               <div class="card bg-white p-4 rounded-lg">
-                <div
+                <figure
                   class="bg-[#F8F8F8] py-8 flex items-center justify-center rounded-lg"
                 >
                   <img src="./images/prod8.png" alt="product" />
-                </div>
+                </figure>
                 <div class="text-center pt-[22px]">
                   <!-- rating -->
                   <div class="flex items-center justify-center">
@@ -311,11 +314,11 @@
 
               <!-- card 3 -->
               <div class="card bg-white p-4 rounded-lg">
-                <div
+                <figure
                   class="bg-[#F8F8F8] py-8 flex items-center justify-center rounded-lg"
                 >
                   <img src="./images/prod9.png" alt="product" />
-                </div>
+                </figure>
                 <div class="text-center pt-[22px]">
                   <!-- rating -->
                   <div class="flex items-center justify-center">
@@ -349,14 +352,14 @@
               />
               <button
                 disabled
-                class="btn-coupon bg-[#E527B2] text-white px-4 h-12 text-lg font-medium rounded-tr-lg rounded-br-lg disabled:opacity-70 disabled:cursor-not-allowed"
+                class="btn-coupon bg-[#E527B2] text-white px-4 h-12 text-lg font-medium rounded-tr-lg rounded-br-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Apply
               </button>
             </div>
           </div>
 
-          <div class="bg-white p-5 rounded-lg">
+          <div class="relative bg-white p-5 rounded-lg">
             <ul
               id="cart-item-container"
               class="text-xl font-medium flex flex-col gap-1"
@@ -367,22 +370,30 @@
             <div class="text-xl font-medium flex flex-col gap-1">
               <p>
                 Total price:
-                <span id="total-price" class="text-[#11111180]">00.00TK</span>
+                <span class="text-[#11111180]"
+                  ><span id="total-price">0.00</span>TK</span
+                >
               </p>
               <p>
                 Discount:
-                <span id="discount" class="text-[#11111180]">00.00TK</span>
+                <span class="text-[#11111180]"
+                  ><span id="discount">0.00</span>TK</span
+                >
               </p>
               <p>
                 Total:
-                <span id="total" class="text-[#11111180]">00.00TK</span>
+                <span class="text-[#11111180]"
+                  ><span id="total-after-discount">0.00</span> TK</span
+                >
               </p>
             </div>
-            <span class="block border-b border-[#11111126] w-full my-5"></span>
+            <span
+              class="block border-b border-[#11111126] w-full mt-5 mb-7"
+            ></span>
             <button
               id="btn-purchase"
               disabled
-              class="bg-[#E527B2] text-white px-4 h-12 text-lg font-medium rounded-lg w-full disabled:opacity-70 disabled:cursor-not-allowed"
+              class="absolute left-[5%] lg:left-[6%] bottom-0 translate-y-[42%] bg-[#E527B2] text-white px-4 h-12 text-lg font-medium rounded-lg lg:w-[88%] w-[90%] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Make Purchase
             </button>
